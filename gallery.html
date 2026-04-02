@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Projects | HIRWA Auguste — Software Engineer</title>
+    <meta name="description" content="Projects by HIRWA Auguste — Next.js, React Native, TypeScript-powered applications built with a focus on performance and accessibility." />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="gallery.css" />
+  </head>
+
+  <body>
+    <!-- Top Nav -->
+    <nav class="topnav">
+      <div class="nav-inner">
+        <a class="nav-logo" href="index.html">HA.</a>
+
+        <div class="nav-links">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link active" href="gallery.html">Projects</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="about.html#contact">Contact</a>
+          <button class="btn-hire mobile-only">Hire Me</button>
+        </div>
+
+        <div class="nav-actions">
+          <button class="btn-hire desktop-only">Hire Me</button>
+          <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <!-- Header -->
+      <header class="page-header">
+        <div class="header-inner">
+          <span class="header-label">Portfolio 2020 — 2025</span>
+          <h1 class="header-heading">
+            Selected<br />
+            Projects
+          </h1>
+          <p class="header-desc">
+            A collection of production apps, platforms, and systems built across
+            mobile, web, and full-stack — focused on clean architecture,
+            performance, and accessibility.
+          </p>
+        </div>
+      </header>
+
+      <!-- Filter Bar -->
+      <section class="filter-section">
+        <div class="filter-bar">
+          <button class="filter-btn active">All Projects</button>
+          <button class="filter-btn">Mobile</button>
+          <button class="filter-btn">Web App</button>
+          <button class="filter-btn">Fullstack</button>
+          <button class="filter-btn">Contract</button>
+        </div>
+      </section>
+
+      <!-- Project Grid -->
+      <section class="projects-section">
+        <div class="project-grid">
+          <!-- Project 1 — CITYMOSHI (Large) -->
+          <div class="project-card col-8">
+            <div class="project-image aspect-16-9">
+              <img
+                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1400&q=80"
+                alt="CITYMOSHI mobile app code"
+              />
+            </div>
+            <div class="project-meta">
+              <div class="project-info">
+                <h3 class="project-title large">CITYMOSHI App</h3>
+                <p class="project-sub">Mobile · React Native / Lead Engineer / 2021 — 2025</p>
+              </div>
+              <span class="material-symbols-outlined project-arrow">arrow_outward</span>
+            </div>
+          </div>
+
+          <!-- Project 2 — IDEBATE Rwanda -->
+          <div class="project-card col-4 offset-top">
+            <div class="project-image aspect-4-5">
+              <img
+                src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=80"
+                alt="IDEBATE Rwanda web platform"
+              />
+            </div>
+            <h3 class="project-title">IDEBATE Platform</h3>
+            <p class="project-sub">Web App · Next.js</p>
+          </div>
+
+          <!-- Project 3 — Ranking System -->
+          <div class="project-card col-5">
+            <div class="project-image aspect-square">
+              <img
+                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80"
+                alt="Team ranking system interface"
+              />
+            </div>
+            <h3 class="project-title">Team Ranking System</h3>
+            <p class="project-sub">Fullstack · Auth &amp; Rankings</p>
+          </div>
+
+          <!-- Project 4 — Student Help AI -->
+          <div class="project-card col-7 neg-offset-top">
+            <div class="project-image aspect-3-2">
+              <img
+                src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80"
+                alt="AI-driven student help tool"
+              />
+            </div>
+            <h3 class="project-title large">Student Help AI</h3>
+            <p class="project-sub">AI Feature · Debate Preparation Tool</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-section">
+        <div class="cta-box">
+          <h2 class="cta-heading">Start a Project.</h2>
+          <a class="cta-link" href="about.html#contact">Get in touch</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">HA.</div>
+          <p class="footer-copy">
+            © <span id="footer-year"></span> HIRWA Auguste. All rights
+            reserved.
+          </p>
+        </div>
+        <div class="footer-links">
+          <a class="footer-link" href="https://github.com" target="_blank">GitHub</a>
+          <a class="footer-link" href="https://linkedin.com" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.getElementById("footer-year").textContent =
+        new Date().getFullYear();
+
+      // Filter btn active state
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelector('.filter-btn.active').classList.remove('active');
+          btn.classList.add('active');
+        });
+      });
+    </script>
+  </body>
+</html>

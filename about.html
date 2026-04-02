@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About | HIRWA Auguste — Software Engineer</title>
+    <meta name="description" content="About HIRWA Auguste — Lead Software Engineer based in Kigali, Rwanda. Expert in React, Next.js, TypeScript, and Node.js." />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="about.css" />
+  </head>
+
+  <body>
+    <!-- Top Nav -->
+    <nav class="topnav">
+      <div class="nav-inner">
+        <a class="nav-logo" href="index.html">HA.</a>
+
+        <div class="nav-links">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="gallery.html">Projects</a>
+          <a class="nav-link active" href="about.html">About</a>
+          <a class="nav-link" href="about.html#contact">Contact</a>
+          <button class="btn-hire mobile-only">Hire Me</button>
+        </div>
+
+        <div class="nav-actions">
+          <button class="btn-hire desktop-only">Hire Me</button>
+          <button
+            class="mobile-menu-btn"
+            aria-label="Toggle menu"
+            onclick="
+              document.querySelector('.nav-links').classList.toggle('show')
+            "
+          >
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <!-- Hero / About -->
+      <section class="hero-section">
+        <div class="hero-grid">
+          <div class="hero-left">
+            <span class="hero-label">Software Engineer · Lead Frontend</span>
+            <h1 class="hero-heading">
+              HIRWA<br /><span class="hero-muted">Auguste.</span>
+            </h1>
+            <p class="hero-desc">
+              Experienced software engineer specializing in frontend development
+              with a proven track record of delivering high-quality,
+              production-ready code. Skilled in Agile collaboration, technical
+              leadership, and mentoring for team success.
+            </p>
+          </div>
+          <div class="hero-right">
+            <div class="portrait-frame">
+              <img
+                class="portrait-img"
+                src="user.jpg"
+                alt="HIRWA Auguste portrait"
+              />
+            </div>
+            <div class="exp-badge">
+              <span class="exp-number">5+</span>
+              <p class="exp-label">Years Exp.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bento: Background + Skills -->
+      <section class="bento-section">
+        <div class="bento-grid">
+          <!-- Background -->
+          <div class="bento-card col-2">
+            <div>
+              <h2 class="card-title">Background</h2>
+              <p class="card-body">
+                Based in Kigali, Rwanda. Computer Science graduate from AUCA
+                (2022–2025), with hands-on expertise in object-oriented
+                programming, relational databases, Agile methodologies, and
+                building accessible, scalable web platforms. Fluent in
+                Kinyarwanda, English, and French.
+              </p>
+            </div>
+            <div class="tag-row">
+              <span class="tag">React &amp; Next.js</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Accessibility</span>
+              <span class="tag">CI/CD</span>
+            </div>
+          </div>
+
+          <!-- Skills grid -->
+          <div class="bento-card col-2 skills-grid">
+            <div class="skill-card">
+              <span class="material-symbols-outlined skill-icon">code</span>
+              <h3 class="skill-title">Frontend</h3>
+              <p class="skill-desc">
+                React, Next.js, TypeScript, Tailwind CSS, HTML &amp; CSS.
+                Building pixel-perfect, performant UIs.
+              </p>
+            </div>
+            <div class="skill-card">
+              <span class="material-symbols-outlined skill-icon">hub</span>
+              <h3 class="skill-title">Backend</h3>
+              <p class="skill-desc">
+                Node.js, Nest.js, REST APIs, PostgreSQL, MongoDB. Solid
+                full-stack capabilities.
+              </p>
+            </div>
+            <div class="skill-card">
+              <span class="material-symbols-outlined skill-icon">smartphone</span>
+              <h3 class="skill-title">Mobile</h3>
+              <p class="skill-desc">
+                React Native &amp; Expo. Shipping cross-platform apps with
+                native-feel experience.
+              </p>
+            </div>
+            <div class="skill-card">
+              <span class="material-symbols-outlined skill-icon">settings_suggest</span>
+              <h3 class="skill-title">DevOps &amp; Tools</h3>
+              <p class="skill-desc">
+                Git, Docker, Vercel, Netlify, Heroku, CI/CD, Webpack, Figma,
+                Firebase.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline -->
+          <div class="bento-card col-4 timeline-card">
+            <h2 class="card-title">Experience</h2>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-left">
+                  <span class="timeline-year">2021 — 2025</span>
+                  <div>
+                    <h4 class="timeline-role">Lead Software Engineer</h4>
+                    <p class="timeline-company">CITYMOSHI</p>
+                  </div>
+                </div>
+                <span class="timeline-desc"
+                  >Led research, development, and architecture for diverse
+                  client projects including the CITYMOSHI mobile app. Fostered
+                  knowledge-sharing, mentoring, and company-wide accessibility
+                  initiatives.</span
+                >
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-left">
+                  <span class="timeline-year">Aug 2023 — Apr 2024</span>
+                  <div>
+                    <h4 class="timeline-role">Software Engineer (Contract)</h4>
+                    <p class="timeline-company">IDEBATE Rwanda</p>
+                  </div>
+                </div>
+                <span class="timeline-desc"
+                  >Developed interactive web applications using Next.js and
+                  Tailwind CSS. Architected the team ranking system, user
+                  authorization, and contributed to the Student Help AI
+                  feature.</span
+                >
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-left">
+                  <span class="timeline-year">Jun 2021 — Aug 2023</span>
+                  <div>
+                    <h4 class="timeline-role">Fullstack Software Engineer</h4>
+                    <p class="timeline-company">AQUILLA SPEEDS</p>
+                  </div>
+                </div>
+                <span class="timeline-desc"
+                  >Managed a diverse team of developers, led code reviews, and
+                  authored clean, maintainable code adhering to industry
+                  standards.</span
+                >
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-left">
+                  <span class="timeline-year">May 2020 — Present</span>
+                  <div>
+                    <h4 class="timeline-role">Freelance Engineer</h4>
+                    <p class="timeline-company">Independent</p>
+                  </div>
+                </div>
+                <span class="timeline-desc"
+                  >Adapted quickly to new technologies, delivered multiple
+                  features on schedule, and authored clean, well-documented code
+                  across various client projects.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technical Skills Stack -->
+      <section class="stack-section">
+        <div class="stack-inner">
+          <h2 class="card-title">Full Tech Stack</h2>
+          <div class="stack-grid">
+            <div class="stack-group">
+              <p class="stack-label">Languages</p>
+              <div class="tag-row">
+                <span class="tag">JavaScript</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Python</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS / Sass</span>
+              </div>
+            </div>
+            <div class="stack-group">
+              <p class="stack-label">Libraries &amp; Frameworks</p>
+              <div class="tag-row">
+                <span class="tag">React</span>
+                <span class="tag">Next.js</span>
+                <span class="tag">Nest.js</span>
+                <span class="tag">React Native</span>
+                <span class="tag">Expo</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">Tailwind CSS</span>
+                <span class="tag">Jest</span>
+              </div>
+            </div>
+            <div class="stack-group">
+              <p class="stack-label">Tools &amp; Platforms</p>
+              <div class="tag-row">
+                <span class="tag">Git / GitHub</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Vercel</span>
+                <span class="tag">Netlify</span>
+                <span class="tag">CI/CD</span>
+                <span class="tag">Firebase</span>
+                <span class="tag">Figma</span>
+                <span class="tag">Webpack</span>
+              </div>
+            </div>
+            <div class="stack-group">
+              <p class="stack-label">Databases</p>
+              <div class="tag-row">
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">MongoDB</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="contact-section" id="contact">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h2 class="contact-heading">
+              Let's build<br />something great.
+            </h2>
+            <p class="contact-desc">
+              Open to new opportunities, freelance contracts, and interesting
+              technical challenges. Let's connect and talk.
+            </p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <span class="contact-icon-wrap">
+                  <span class="material-symbols-outlined">mail</span>
+                </span>
+                <div>
+                  <p class="contact-item-label">Email</p>
+                  <p class="contact-item-value">user@gmail.com</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon-wrap">
+                  <span class="material-symbols-outlined">location_on</span>
+                </span>
+                <div>
+                  <p class="contact-item-label">Location</p>
+                  <p class="contact-item-value">Kigali, Rwanda</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon-wrap">
+                  <span class="material-symbols-outlined">phone</span>
+                </span>
+                <div>
+                  <p class="contact-item-label">Phone</p>
+                  <p class="contact-item-value">+250 788 123 456</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-wrap">
+            <form class="contact-form">
+              <div class="form-row">
+                <div class="form-field">
+                  <label class="form-label">Name</label>
+                  <input
+                    class="form-input"
+                    type="text"
+                    placeholder="John Doe"
+                  />
+                  <div class="input-underline"></div>
+                </div>
+                <div class="form-field">
+                  <label class="form-label">Email Address</label>
+                  <input
+                    class="form-input"
+                    type="email"
+                    placeholder="john@example.com"
+                  />
+                  <div class="input-underline"></div>
+                </div>
+              </div>
+              <div class="form-field">
+                <label class="form-label">Your Message</label>
+                <textarea
+                  class="form-input form-textarea"
+                  rows="4"
+                  placeholder="Tell me about your project..."
+                ></textarea>
+                <div class="input-underline"></div>
+              </div>
+              <button class="btn-submit" type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">HA.</div>
+          <p class="footer-copy">
+            © <span id="footer-year"></span> HIRWA Auguste. All rights
+            reserved.
+          </p>
+        </div>
+        <div class="footer-links-wrap">
+          <div class="footer-links">
+            <a class="footer-link" href="https://github.com" target="_blank">GitHub</a>
+            <a class="footer-link" href="https://linkedin.com" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("footer-year").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
+</html>

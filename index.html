@@ -1,0 +1,203 @@
+<!doctype html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>HIRWA Auguste — Software Engineer</title>
+    <meta name="description" content="Frontend-focused software engineer specializing in production-ready web applications. React, Next.js, TypeScript and more." />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Inter:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <!-- Top Nav -->
+    <nav class="topnav">
+      <div class="nav-inner">
+        <a class="nav-logo" href="index.html">HA.</a>
+
+        <div class="nav-links">
+          <a class="nav-link active" href="index.html">Home</a>
+          <a class="nav-link" href="gallery.html">Projects</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="about.html#contact">Contact</a>
+          <button class="btn-hire mobile-only">Hire Me</button>
+        </div>
+
+        <div class="nav-actions">
+          <button class="btn-hire desktop-only">Hire Me</button>
+          <button
+            class="mobile-menu-btn"
+            aria-label="Toggle menu"
+            onclick="
+              document.querySelector('.nav-links').classList.toggle('show')
+            "
+          >
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-grid">
+          <div class="hero-left">
+            <span class="hero-label">Lead Software Engineer · Kigali, Rwanda</span>
+            <h1 class="hero-heading">
+              BUILDING<br />
+              <span class="hero-gradient-text">THINGS THAT</span><br />
+              MATTER.
+            </h1>
+          </div>
+          <div class="hero-right">
+            <p class="hero-description">
+              I'm Auguste — a frontend-focused engineer with a track record of shipping
+              production-ready code. I turn complex requirements into clean,
+              accessible, and performant interfaces.
+            </p>
+            <div class="hero-scroll-hint">
+              <span class="scroll-line"></span>
+              <span class="scroll-label">Scroll to explore</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Work (Bento Grid) -->
+      <section class="work-section">
+        <div class="work-header">
+          <h2 class="section-title">Selected Work</h2>
+          <div class="work-count">01 — 03</div>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Project 1: CITYMOSHI -->
+          <div class="bento-card bento-large">
+            <img
+              class="bento-img"
+              src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&q=80"
+              alt="Code on dark screen — software engineering"
+            />
+            <div class="bento-overlay">
+              <span class="bento-tag">Mobile App · React Native</span>
+              <h3 class="bento-title large">CITYMOSHI</h3>
+              <p class="bento-desc">
+                Led architecture and development of the CITYMOSHI mobile app,
+                collaborating with creative directors to align technical solutions
+                with business goals.
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 2: IDEBATE Platform -->
+          <div class="bento-card bento-square">
+            <img
+              class="bento-img"
+              src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=80"
+              alt="Web application interface"
+            />
+            <div class="bento-overlay">
+              <span class="bento-tag">Next.js · Tailwind</span>
+              <h3 class="bento-title">IDEBATE</h3>
+            </div>
+          </div>
+
+          <!-- Project 3: Team Ranking / Auth -->
+          <div class="bento-card bento-vertical">
+            <img
+              class="bento-img"
+              src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80"
+              alt="Developer workspace"
+            />
+            <div class="bento-overlay">
+              <span class="bento-tag">Auth · Rankings</span>
+              <h3 class="bento-title">RANKING SYS.</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-section">
+          <p class="cta-label">Clean code. Accessible interfaces. Real results.</p>
+          <a class="cta-link" href="gallery.html">
+            <span class="cta-text">View All Projects</span>
+            <div class="cta-arrow">
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Bio / About Section -->
+      <section class="about-section">
+        <div class="about-grid">
+          <div class="about-image-wrap">
+            <div class="about-image-frame">
+              <img
+                class="about-img"
+                src="user.jpg"
+                alt="HIRWA Auguste — Software Engineer"
+              />
+            </div>
+            <div class="about-deco"></div>
+          </div>
+
+          <div class="about-content">
+            <h2 class="section-title">THE APPROACH</h2>
+            <p class="about-quote">
+              Great software isn't just functional — it's maintainable, accessible,
+              and built with the team in mind. I write code that future-me and
+              future-teammates will thank present-me for.
+            </p>
+            <div class="principles">
+              <div class="principle-item">
+                <span class="principle-num">01</span>
+                <span class="principle-label">Accessibility First</span>
+              </div>
+              <div class="principle-item">
+                <span class="principle-num">02</span>
+                <span class="principle-label">Clean, Maintainable Code</span>
+              </div>
+              <div class="principle-item">
+                <span class="principle-num">03</span>
+                <span class="principle-label">Agile Collaboration</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <div class="footer-logo">HA.</div>
+            <p class="footer-copy">
+              © <span id="footer-year"></span> HIRWA Auguste. All rights
+              reserved.
+            </p>
+          </div>
+          <div class="footer-links">
+            <a class="footer-link" href="https://github.com" target="_blank">GitHub</a>
+            <a class="footer-link" href="https://linkedin.com" target="_blank">LinkedIn</a>
+          </div>
+          <div class="footer-top">
+            <button class="btn-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to Top</button>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script>
+      document.getElementById("footer-year").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
+</html>
