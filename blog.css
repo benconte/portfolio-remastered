@@ -1,11 +1,5 @@
-@import url('./gallery.css');
+@import url("./gallery.css");
 
-/* We are reusing the base layout, typography, nav, header from gallery.css */
-/* Below are the extensions for the blog list and single post specific styles */
-
-/* ============================================================
-   BLOG LIST ARCHITECTURE
-   ============================================================ */
 .blog-section {
   padding: 0 3rem 8rem 3rem;
   max-width: 1400px;
@@ -55,7 +49,9 @@
   height: 100%;
   object-fit: cover;
   filter: grayscale(100%);
-  transition: filter var(--transition-base), transform var(--transition-slow);
+  transition:
+    filter var(--transition-base),
+    transform var(--transition-slow);
 }
 
 .blog-card:hover .blog-img {
@@ -226,7 +222,7 @@
 }
 
 .post-content code {
-  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   font-size: 0.9rem;
   color: #e2e2e8;
 }
