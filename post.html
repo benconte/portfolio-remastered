@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Mastering React Server Components in Next.js 15 | HIRWA Auguste</title>
+    <meta name="description" content="An in-depth look at how React Server Components change the way we build data-fetching architectures, improving performance and simplifying our overall stack." />
+    <meta property="og:title" content="Mastering React Server Components | HIRWA Auguste" />
+    <meta property="og:description" content="An in-depth look at how React Server Components change the way we build data-fetching architectures." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://hirwaauguste.com/post.html" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&q=80" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mastering React Server Components | HIRWA Auguste" />
+    <meta name="twitter:description" content="An in-depth look at how React Server Components change the way we build data-fetching architectures." />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&q=80" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="blog.css" />
+  </head>
+
+  <body>
+    <!-- Top Nav -->
+    <nav class="topnav">
+      <div class="nav-inner">
+        <a class="nav-logo" href="index.html">HA.</a>
+
+        <div class="nav-links">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="gallery.html">Projects</a>
+          <a class="nav-link" href="blog.html">Blog</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="about.html#contact">Contact</a>
+          <button class="btn-hire mobile-only">Hire Me</button>
+        </div>
+
+        <div class="nav-actions">
+          <button class="btn-hire desktop-only">Hire Me</button>
+          <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <!-- Post Meta Header -->
+      <header class="post-header">
+        <div class="post-meta">
+          <span class="blog-category">Next.js</span>
+          <span class="blog-date">Apr 2, 2026</span>
+          <span class="blog-date">· 5 min read</span>
+        </div>
+        <h1 class="post-title">
+          Mastering React Server Components in Next.js 15
+        </h1>
+      </header>
+
+      <!-- Hero Image -->
+      <div class="post-hero-image">
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1600&q=80" alt="Code editor showing React Server Components" />
+      </div>
+
+      <!-- Post Content -->
+      <article class="post-content">
+        <p>
+          The introduction of React Server Components (RSC) marked one of the most significant architectural shifts in the React ecosystem since Hooks. While initial adoption was met with a steep learning curve, frameworks like Next.js 15 have smoothed out the edges, allowing developers to embrace RSC as the default way to build web applications.
+        </p>
+
+        <h2>The Problem RSC Solves</h2>
+        <p>
+          Before Server Components, we often had to decide between doing data fetching at the page level (getServerSideProps) and passing huge props payloads down the tree, or client-side fetching with useEffect which led to network waterfalls and loading spinners everywhere.
+        </p>
+        <p>
+          Server Components solve this by allowing you to fetch data directly inside your React components on the server. Because they never ship code to the client, they have zero impact on your bundle size.
+        </p>
+
+        <!-- Code Snippet -->
+<pre><code>// app/page.tsx (Server Component)
+import { db } from '@/lib/db';
+import { PostList } from '@/components/PostList';
+
+export default async function HomePage() {
+  // Direct database access! No API route needed.
+  const posts = await db.post.findMany({
+    orderBy: { createdAt: 'desc' },
+    take: 10
+  });
+
+  return (
+    &lt;main&gt;
+      &lt;h1&gt;Latest Posts&lt;/h1&gt;
+      &lt;PostList initialData={posts} /&gt;
+    &lt;/main&gt;
+  );
+}</code></pre>
+
+        <blockquote>
+          "React Server Components allow us to seamlessly blend the zero-bundle-size speed of traditional server rendering with the rich interactivity of client-side apps."
+        </blockquote>
+
+        <h2>Crossing the boundary</h2>
+        <p>
+          The most important concept to master is the network boundary. A Server Component can render a Client Component and pass data to it, but a Client Component cannot import a Server Component directly. Instead, you can pass a Server Component as a child or a prop to a Client Component.
+        </p>
+        
+        <img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=1000&q=80" alt="GitHub contributions graph" />
+
+        <h2>Summary</h2>
+        <p>
+          By leveraging Server Components for data fetching and static markup, and keeping Client Components thin (used only where `useState`, `onClick`, or browser APIs are needed), you drastically reduce the sheer volume of JavaScript shipped to the client resulting in drastically improved Largest Contentful Paint (LCP). Let's continue pushing the boundaries!
+        </p>
+      </article>
+
+      <!-- Comments Section -->
+      <section class="post-comments">
+        <h3 class="comments-title">Discussion</h3>
+        <!-- Reuse Contact Form Styles for Comment Input -->
+        <form class="contact-form" style="padding: 0; background: transparent;">
+          <div class="form-field">
+            <label class="form-label">Add a comment</label>
+            <textarea
+              class="form-input form-textarea"
+              rows="3"
+              placeholder="Join the conversation..."
+            ></textarea>
+            <div class="input-underline"></div>
+          </div>
+          <button class="btn-submit" type="button" style="width: auto; padding: 0.75rem 2rem; margin-top: 1.5rem;">Post Comment</button>
+        </form>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section" style="margin-top: 0; padding-top: 4rem; border-top: 1px solid var(--surface-container-high);">
+        <div class="cta-box">
+          <h2 class="cta-heading">Keep exploring</h2>
+          <a class="cta-link" href="blog.html">Back to Blog</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">HA.</div>
+          <p class="footer-copy">
+            © <span id="footer-year"></span> HIRWA Auguste. All rights reserved.
+          </p>
+        </div>
+        <div class="footer-links">
+          <a class="footer-link" href="https://github.com" target="_blank">GitHub</a>
+          <a class="footer-link" href="https://linkedin.com" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.getElementById("footer-year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
