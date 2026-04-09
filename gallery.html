@@ -4,15 +4,30 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Projects | HIRWA Auguste — Software Engineer</title>
-    <meta name="description" content="Projects by HIRWA Auguste — Next.js, React Native, TypeScript-powered applications built with a focus on performance and accessibility." />
-    <meta property="og:title" content="Projects | HIRWA Auguste — Software Engineer" />
-    <meta property="og:description" content="Projects by HIRWA Auguste — Next.js, React Native, TypeScript-powered applications built with a focus on performance and accessibility." />
+    <meta
+      name="description"
+      content="Projects by HIRWA Auguste — Next.js, React Native, TypeScript-powered applications built with a focus on performance and accessibility."
+    />
+    <meta
+      property="og:title"
+      content="Projects | HIRWA Auguste — Software Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Projects by HIRWA Auguste — Next.js, React Native, TypeScript-powered applications built with a focus on performance and accessibility."
+    />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://hirwaauguste.com/gallery.html" />
     <meta property="og:image" content="user.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Projects | HIRWA Auguste — Software Engineer" />
-    <meta name="twitter:description" content="Projects by HIRWA Auguste — Next.js, React Native, TypeScript-powered applications built with a focus on performance and accessibility." />
+    <meta
+      name="twitter:title"
+      content="Projects | HIRWA Auguste — Software Engineer"
+    />
+    <meta
+      name="twitter:description"
+      content="Projects by HIRWA Auguste — Next.js, React Native, TypeScript-powered applications built with a focus on performance and accessibility."
+    />
     <meta name="twitter:image" content="user.jpg" />
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Inter:wght@400;500;600&display=swap"
@@ -36,13 +51,20 @@
           <a class="nav-link active" href="gallery.html">Projects</a>
           <a class="nav-link" href="blog.html">Blog</a>
           <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="testimonials.html">Testimonials</a>
           <a class="nav-link" href="about.html#contact">Contact</a>
           <button class="btn-hire mobile-only">Hire Me</button>
         </div>
 
         <div class="nav-actions">
           <button class="btn-hire desktop-only">Hire Me</button>
-          <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+          <button
+            class="mobile-menu-btn"
+            aria-label="Toggle menu"
+            onclick="
+              document.querySelector('.nav-links').classList.toggle('show')
+            "
+          >
             <span class="material-symbols-outlined">menu</span>
           </button>
         </div>
@@ -91,9 +113,13 @@
             <div class="project-meta">
               <div class="project-info">
                 <h3 class="project-title large">CITYMOSHI App</h3>
-                <p class="project-sub">Mobile · React Native / Lead Engineer / 2021 — 2025</p>
+                <p class="project-sub">
+                  Mobile · React Native / Lead Engineer / 2021 — 2025
+                </p>
               </div>
-              <span class="material-symbols-outlined project-arrow">arrow_outward</span>
+              <span class="material-symbols-outlined project-arrow"
+                >arrow_outward</span
+              >
             </div>
           </div>
 
@@ -150,13 +176,22 @@
         <div class="footer-brand">
           <div class="footer-logo">HA.</div>
           <p class="footer-copy">
-            © <span id="footer-year"></span> HIRWA Auguste. All rights
-            reserved.
+            © <span id="footer-year"></span> HIRWA Auguste. All rights reserved.
           </p>
         </div>
         <div class="footer-links">
-          <a class="footer-link" href="https://github.com" target="_blank">GitHub</a>
-          <a class="footer-link" href="https://linkedin.com" target="_blank">LinkedIn</a>
+          <a
+            class="footer-link"
+            href="https://github.com/benconte"
+            target="_blank"
+            >GitHub</a
+          >
+          <a
+            class="footer-link"
+            href="https://www.linkedin.com/in/hirwa-auguste-7bba9a22a/"
+            target="_blank"
+            >LinkedIn</a
+          >
         </div>
       </div>
     </footer>
@@ -165,10 +200,12 @@
         new Date().getFullYear();
 
       // Filter btn active state
-      document.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          document.querySelector('.filter-btn.active').classList.remove('active');
-          btn.classList.add('active');
+      document.querySelectorAll(".filter-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document
+            .querySelector(".filter-btn.active")
+            .classList.remove("active");
+          btn.classList.add("active");
         });
       });
     </script>
